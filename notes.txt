@@ -1,0 +1,10 @@
+let filteredProducts = products
+  if (category) {
+    filteredProducts = filteredProducts.filter((pd) => pd.category === category
+    )
+  }
+  if (rating) {
+    filteredProducts = filteredProducts.filter((pd)=> pd.rating === +rating )
+  }
+
+  res.send(filteredProducts)
