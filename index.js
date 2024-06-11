@@ -6,7 +6,7 @@ import { productsRouter } from "./Routes/products.js";
 dotenv.config()
 
 const app = express()
-const port = 5000
+const PORT = process.env.PORT
 
 console.log(process.env.Mongo_URL)
 
@@ -29,6 +29,6 @@ app.get('/', (req, res) => {
 
 app.use("/products", productsRouter) 
 
-app.listen(port,()=>console.log("server running on",port))
+app.listen(PORT,()=>console.log("server running on",PORT))
 
  
